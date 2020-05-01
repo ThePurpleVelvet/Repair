@@ -43,6 +43,8 @@ public class Login extends AppCompatActivity {
 
                 if (username.equals(sentUsername)  && password.equals(sentPassword)){
                     Toast.makeText(getApplicationContext(),"You are logged in " + sentName + " !",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(Login.this, Home.class);
+                    startActivity(intent);
                 }else
                 {
                     Toast.makeText(getApplicationContext(),"Incorrect username or password " + username + " " + sentUsername,Toast.LENGTH_LONG).show();
